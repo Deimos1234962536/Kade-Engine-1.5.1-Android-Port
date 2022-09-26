@@ -139,6 +139,24 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+
+			case 'tankman':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/Tankman', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'idle', 24);
+				animation.addByPrefix('singUP', 'sing up', 24);
+				animation.addByPrefix('singRIGHT', 'sing right', 24);
+				animation.addByPrefix('singDOWN', 'sing down', 24);
+				animation.addByPrefix('singLEFT', 'sing left', 24);
+
+				addOffset('idle');
+				addOffset("singUP", -6, 50);
+				addOffset("singRIGHT", 0, 27);
+				addOffset("singLEFT", -10, 10);
+				addOffset("singDOWN", 0, -30);
+
+				playAnim('idle');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
